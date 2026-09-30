@@ -1,7 +1,11 @@
 body 
 {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #000001;
+  background-image: url("fondo2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: #333;
   margin: 0;
   padding: 0;
@@ -9,7 +13,7 @@ body
 
 header 
 {
-  background: linear-gradient(135deg, #1eff31a9, #7c3aedb7);
+  background: linear-gradient(135deg, #7c3aedb7, #bababbb7);
   color: #fb0303;
   padding: 3rem 1rem;
   text-align: center;
@@ -69,8 +73,8 @@ main
   position: relative;
   left: -400px;
 
-  background-color: #32862cce;
-  border-left: 10px solid #832f83ac;
+  background-color: #a6a7a6ce;
+  border-left: 10px solid #681999cf;
   border-radius: 7px;
   padding: 2rem;
   margin-bottom: 1.5rem;
@@ -85,7 +89,7 @@ main
 
 .card h2 
 {
-  color: #1b167c;
+  color: #f70303;
   margin-top: 0;
 }
 
@@ -127,7 +131,7 @@ footer
 {
   text-align: center;
   padding: 1.2rem;
-  background-color: hwb(134 7% 51% / 0.693);
+  background-color: hwb(0 96% 4% / 0.541);
   color: #94a3b8;
   margin-top: 2rem;
 }
