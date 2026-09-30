@@ -1,0 +1,60 @@
+!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evaluación 1 - desarrollo web</title>
+  <link rel="stylesheet" href="prueba.css">
+</head>
+<body>
+
+  <header>
+    <h1>Proyecto Evaluación</h1>
+    <p class="subtitle">Desarrollo Web</p>
+    <button id="btnPrincipal" class="btn">Ver imagen</button>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Acerca del Proyecto</h2>
+      <p>No hubo complicaciones.</p>
+    </section>
+
+    <section class="card">
+      <h2>Detalles de Entrega</h2>
+      <p>Entrega Completada.</p>
+    </section>
+
+    <section id="contenedorImagen" class="card imagen-seccion hidden">
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; Universidad Bernardo O'higgins</p>
+  </footer>
+
+  <script>
+    const boton = document.getElementById('btnPrincipal');
+    const contenedor = document.getElementById('contenedorImagen');
+
+    boton.addEventListener('click', function() {
+      contenedor.classList.remove('hidden');
+      contenedor.classList.add('show');
+
+      if (contenedor.querySelector('img')) return;
+
+      const nuevaImagen = document.createElement('img');
+      nuevaImagen.setAttribute('src', 'lapeace.jpg');
+      nuevaImagen.setAttribute('alt', 'lapeace');
+      nuevaImagen.className = 'imagen-revelada';
+
+      contenedor.appendChild(nuevaImagen);
+
+      boton.textContent = 'Imagen Cargada';
+      boton.style.opacity = '0.7';
+      boton.disabled = true;
+    });
+  </script>
+
+</body>
+</html>
